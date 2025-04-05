@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const DBCon=async()=>{
     try {
 
-        mongoose.connect("mongodb+srv://chumki:1234@cluster0.rlhfooc.mongodb.net/restoDB?retryWrites=true&w=majority&appName=Cluster0")
+        mongoose.connect(process.env.MONGODBURL)
         console.log('Mongo DB is connected')
         
     } catch (error) {
